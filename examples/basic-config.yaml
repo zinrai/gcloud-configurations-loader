@@ -1,0 +1,10 @@
+configurations:
+  - name: "dev-environment"
+    properties:
+      account: "dev@company.com"
+      project: "my-dev-project"
+
+  - name: "prod-environment"
+    properties:
+      account: "prod@company.com"
+      project: "my-prod-project"

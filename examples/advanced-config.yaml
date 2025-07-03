@@ -1,0 +1,32 @@
+configurations:
+  - name: "dev-environment"
+    properties:
+      account: "dev@company.com"
+      project: "my-dev-project"
+      compute/region: "us-central1"
+      compute/zone: "us-central1-a"
+
+  - name: "staging-environment"
+    properties:
+      account: "staging@company.com"
+      project: "my-staging-project"
+      compute/region: "us-west1"
+      compute/zone: "us-west1-b"
+      core/disable_prompts: "true"
+
+  - name: "prod-environment"
+    properties:
+      account: "prod@company.com"
+      project: "my-prod-project"
+      compute/region: "us-east1"
+      compute/zone: "us-east1-b"
+      core/disable_prompts: "true"
+      auth/impersonate_service_account: "automation@my-prod-project.iam.gserviceaccount.com"
+
+  - name: "ci-environment"
+    properties:
+      account: "ci@company.com"
+      project: "my-ci-project"
+      core/disable_prompts: "true"
+      core/disable_usage_reporting: "true"
+      auth/disable_credentials: "false"
